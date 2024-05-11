@@ -10,3 +10,39 @@ countDigits() to count the number of digits in the entered number and show the n
 
 reverseNumber() to reverse the entered number and show the reversed number to the user
 */
+#include<stdio.h>
+int countDigits(int num){
+    int count = 0;
+    while(num != 0){
+        count++;
+        num = num/10;
+    }
+    return count;
+}
+int reverseNumber(int num){
+    int rem = 0;
+    int reverse = 0;
+    while(num!=0){
+        rem = num%10;
+        reverse = rem + reverse*10;
+        num = num/10;
+    }
+    return reverse;
+}
+void main()
+{
+    int num;
+    while(1)
+    {
+        printf("Enter a valid number (0 for exit): ");
+        scanf("%d",&num);
+        if(num == 0)
+        {
+            printf("Exiting..\n");
+            return;
+        }else{
+            printf("The reversed number is : %d\n",reverseNumber(num));
+            printf("The number count is : %d\n",countDigits(num));
+        }
+    }
+}
