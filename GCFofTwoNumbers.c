@@ -7,3 +7,28 @@ Output: 1
 Input: 36 & 54
 Output: 18
 */
+
+#include<stdio.h>
+#include<math.h>
+void printGCF(int num1, int num2){
+    int min = (num1<num2)? num1:num2;
+    int GCF = 1;
+    for(int i=1;i<=min;i++){
+        if(num1%i == 0 && num2%i ==0){
+            GCF = i;
+        }
+    }
+    printf("GCF is : %d\n",GCF);
+}
+void main()
+{
+    int num1,num2;
+    printf("Enter two number : ");
+    scanf("%d%d",&num1,&num2);
+    if(1<num1<pow(10,3) && 1<num2<pow(10,3)){
+        printGCF(num1,num2);
+    }else{
+        return;
+    }
+
+}

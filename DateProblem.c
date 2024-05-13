@@ -6,3 +6,8 @@ Write a logic to determine the weekday of a date
 Write a logic to determine the day of the week for the given date
 Write a logic to check if the given year is a leap year
 */
+#include<stdio.h>
+void main()
+{
+    
+}
